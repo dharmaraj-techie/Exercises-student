@@ -31,12 +31,19 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="com.example.android.explicitintent.ChildActivty"
+            android:parentActivityName=".MainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+
+        </activity>
+
         <!--Android Studio will have created an Activity tag if you followed step 1 properly. Do-->
         <!--steps 8 - 11 within that tag. Please see the solution code if you get stuck.-->
-        <!--TODO (8) Specify ChildActivity's parent using android:parentActivityName-->
-        <!--TODO (9) Create a meta-data tag for this Activity-->
-        <!--TODO (10) Specify the name of the meta-data as android.support.PARENT_ACTIVITY-->
-        <!--TODO (11) Specify the value of the meta data as .MainActivity-->
+        <!--Completed (8) Specify ChildActivity's parent using android:parentActivityName-->
+        <!--Completed (9) Create a meta-data tag for this Activity-->
+        <!--Completed (10) Specify the name of the meta-data as android.support.PARENT_ACTIVITY-->
+        <!--Completed (11) Specify the value of the meta data as .MainActivity-->
     </application>
 
 </manifest>
