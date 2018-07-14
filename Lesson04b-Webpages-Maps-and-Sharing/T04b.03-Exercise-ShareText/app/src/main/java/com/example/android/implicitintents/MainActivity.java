@@ -67,10 +67,11 @@ public class MainActivity extends AppCompatActivity {
      * @param v Button that was clicked.
      */
     public void onClickShareTextButton(View v) {
-        // TODO (5) Specify a String you'd like to share
+        // Completed (5) Specify a String you'd like to share
+        String shareString = "India is my country";
 
-        // TODO (6) Replace the Toast with shareText, passing in the String from step 5
-        Toast.makeText(this, "TODO: Share text when this is clicked", Toast.LENGTH_LONG).show();
+        // Completed (6) Replace the Toast with shareText, passing in the String from step 5
+        shareText(shareString);
     }
 
     /**
@@ -149,11 +150,11 @@ public class MainActivity extends AppCompatActivity {
     public void shareText(String sharText){
         String mimeType = "text/plain";
         String title = "Implicit Intent to share";
-        String textToShare = "hello world..!!!";
+
 
         Intent intent = ShareCompat.IntentBuilder.from(this)
                 .setChooserTitle(title)
-                .setText(textToShare)
+                .setText(sharText)
                 .setType(mimeType).getIntent();
 
         if(intent.resolveActivity(getPackageManager()) != null){
